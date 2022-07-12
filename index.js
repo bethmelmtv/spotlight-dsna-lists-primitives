@@ -1,4 +1,10 @@
-module.exports = { reverseWords, capitalizeWords, oddishOrEvenish, at };
+module.exports = {
+  reverseWords,
+  capitalizeWords,
+  oddishOrEvenish,
+  at,
+  fizzBuzz,
+};
 
 function reverseWords(sentence) {
   return (
@@ -44,4 +50,20 @@ function oddishOrEvenish(number) {
 function at(arr, index) {
   const item = arr[index];
   return item;
+}
+
+function fizzBuzz(number) {
+  const divby3 = number % 3;
+  const divby5 = number % 5;
+  const divbyBoth = number % 3 && 5;
+
+  if (divby3 === 0) {
+    return "Fizz";
+  } else if (divby5 === 0) {
+    return "Buzz";
+  } else if (divbyBoth === 0) {
+    return "FizzBuzz";
+  } else {
+    return number;
+  }
 }
