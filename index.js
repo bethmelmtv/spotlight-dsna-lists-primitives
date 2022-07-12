@@ -1,4 +1,4 @@
-module.exports = { reverseWords };
+module.exports = { reverseWords, capitalizeWords };
 
 function reverseWords(sentence) {
   return (
@@ -13,4 +13,14 @@ function reverseWords(sentence) {
   //append it to the emptry string
   //return empty string
   return;
+}
+
+function capitalizeWords(sentence) {
+  const words = sentence.split(' ')
+  const final = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+  return final
+    .join(' ');
+    // .split(' ')
+    // .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    // .join(' ');
 }
