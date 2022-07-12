@@ -4,6 +4,7 @@ const {
   oddishOrEvenish,
   at,
   fizzBuzz,
+  anagrams,
 } = require(".");
 
 describe("reverseWords", () => {
@@ -32,5 +33,11 @@ describe("at", () => {
 describe("fizzBuzz", (at) => {
   it("it should take a number and return fizz if div by 3 and buzz if div by 5 or fizzbuzz if div by both", () => {
     expect(fizzBuzz(35)).toBe("Buzz");
+  });
+});
+
+describe('anagrams', () => {
+  it('should check if all letters in both strings match', () => {
+    expect(anagrams('superintended', 'unpredestined')).toBe(true);
   });
 });

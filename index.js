@@ -4,6 +4,8 @@ module.exports = {
   oddishOrEvenish,
   at,
   fizzBuzz,
+  anagrams,
+
 };
 
 function reverseWords(sentence) {
@@ -67,3 +69,22 @@ function fizzBuzz(number) {
     return number;
   }
 }
+
+function anagrams(wordOne, wordTwo) {
+  
+  let word1 = wordOne.length;
+  let word2 = wordTwo.length;
+
+  if(word1 !== word2){
+    return;
+  }
+
+  let string1 = wordOne.split('').sort().join('');
+  let string2 = wordTwo.split('').sort().join('');
+  if (string1 === string2) {
+    return true;
+  } else {
+    return false;
+  }
+
+ }
