@@ -1,4 +1,4 @@
-module.exports = { reverseWords, capitalizeWords, oddishOrEvenish };
+module.exports = { reverseWords, capitalizeWords, oddishOrEvenish, at };
 
 function reverseWords(sentence) {
   return (
@@ -39,4 +39,9 @@ function oddishOrEvenish(number) {
   } else {
     return "Oddish";
   }
+}
+
+function at(arr, index) {
+  const item = arr[index];
+  return item;
 }

@@ -1,4 +1,4 @@
-const { reverseWords, capitalizeWords, oddishOrEvenish } = require(".");
+const { reverseWords, capitalizeWords, oddishOrEvenish, at } = require(".");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {
@@ -16,3 +16,9 @@ describe("oddishOrEvenish", () => {
     expect(oddishOrEvenish(1234)).toBe("Evenish");
   });
 });
+
+describe('at', () => {
+  it('it should take an array and an index and return the item at corresponding index', () => {
+    expect(at(['a', 'b', 'c', 'd', 'e'], 2)).toBe('c')
+  })
+})
